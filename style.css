@@ -1,0 +1,162 @@
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main {
+    flex: 1;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #4a90e2;
+}
+
+/* Flexbox form */
+#note-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+#note-form label {
+    width: 100%;
+    font-weight: bold;
+}
+
+#note-input {
+    flex: 2;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#note-category {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+#error-message {
+    color: red;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    min-height: 1.5rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Note cards */
+#notes-list {
+    list-style: none;
+}
+
+.note-card {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.note-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Category visual styles */
+.category-personal {
+    border-left: 5px solid teal;
+}
+
+.category-work {
+    border-left: 5px solid darkred;
+}
+
+.category-study {
+    border-left: 5px solid blue;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+    #note-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #note-input, #note-category, button {
+        width: 100%;
+    }
+}
